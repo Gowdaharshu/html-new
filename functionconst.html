@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Syntax : const obj = new Function(arg1, arg2,..., funcion body) -->
+
+    <p id="demo"></p>
+
+    <script>
+        const func = new Function("p", "q", "return p*q");
+        document.getElementById("demo").innerHTML = 'The value returned from the function is: ' + func(5,7)
+    </script>
+
+    <!-- Function Hoisting  : -->
+<script>
+    add(5,10);
+    function add(x,y){
+        return x+y;
+    }
+</script>
+
+<script>
+    function add(x,y){
+        return x+y;
+    }
+    add(5,10);
+</script>
+
+
+<p id="output"></p>
+<script>
+    printMessage("Top");
+    function printMessage(pos){
+        document.getElementById('output').innerHTML += "The function is called from the" +pos + "<br>"
+    }
+    printMessage("Bottom")
+</script>
+</body>
+</html>

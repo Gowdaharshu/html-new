@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Important methods of function: call(), apply(), bind() 
+     syntax: 
+     
+     funcName.call(thisArg, arg1, arg2,...argN)
+     
+     Function call() method without specifying arguments -->
+
+     <p id="demo"></p>
+     <p id="demo1"></p>
+
+     <script>
+        function test(){
+            return "The function is invoked";
+        }
+        document.getElementById("demo").innerHTML = test();
+        document.getElementById("demo1").innerHTML = test.call();
+     </script>
+
+     <!-- with 'this' argument only -->
+
+     <p id="demo2"></p>
+     <p id="demo3"></p>
+
+     <script>
+        function printMessage(){
+            return "The age of the "= this.name + "is" + this.age;
+        }
+        const person1 = {
+            name : "John",
+            age : 22,
+        }
+        const person2 = {
+            name : 'John',
+            age : 40,
+        }
+        document.getElementById("demo2").innerHTML = printMessage.call(person1);
+        document.getElementById("demo3").innerHTML = printMessage.call(person2);
+
+     </script>
+</body>
+</html>

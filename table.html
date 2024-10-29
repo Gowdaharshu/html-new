@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,th,td{
+            border: 3px solid green;
+            border-collapse: collapse;
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th colspan="2">Contact</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>23</td>
+            <td>9876439876</td>
+            <td>9876534587</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>24</td>
+            <td>98765234</td>
+            <td>9876542348</td>
+        </tr>
+    </table>
+
+    <hr style="border: 2px solid black;">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>X</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>25</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Contact</th>
+            <td>98765432345</td>
+            <td>09876534587</td>
+        </tr>
+        <tr>
+            <td>876542347</td>
+            <td>987653476</td>
+        </tr>
+    </table>
+</body>
+</html>
